@@ -2,5 +2,5 @@
 
 echo "rahim:: hi robert"
 echo "robert:: hello rahim"
-echo "how are u"
-echo "i am good,how are U"
+echo "rahim:: how are u"
+echo "robert:: i am good,how are U"
