@@ -21,7 +21,7 @@ then
     echo "installing mysql ....SUCCESS"
  fi
 else
-  echo " mysql is already installed
+  echo " mysql is already installed "
 fi
 
 dnf list installed git
