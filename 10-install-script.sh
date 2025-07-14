@@ -8,9 +8,9 @@ echo "ERROR:: you must have sudo access to execute this script"
 exit 1 # other than 0
 fi
 
-dnf install mysqll -y
+dnf install mysqlldgd -y
 
-if [ $? -ne o ]
+if [ $? -ne 0 ]
 then
 echo "installing mysql .....FAILURE"
 exit 2
@@ -20,7 +20,7 @@ fi
 
 dnf install git -y
 
-if [ $? -ne o ]
+if [ $? -ne 0]
 then
 echo "installing git .....FAILURE"
 exit 3
