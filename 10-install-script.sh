@@ -8,7 +8,7 @@ echo "ERROR:: you must have sudo access to execute this script"
 exit 1 # other than 0
 fi
 
-dnf install mysqlldgd -y
+dnf install mysqllshh -y
 
 if [ $? -ne 0 ]
 then
