@@ -4,7 +4,7 @@ USERID=$( id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-N="\e[0m" #it has to given, other wise previous mentioned color will contine 
+N="\e[0m" #it has to give, other wise previous mentioned color will contine 
 
 LOG_FOLDER="/var/log/shell-script.log" # /var/log/shell-script.log 
 LOG_FILE=$(echo $0 | cut -d "." -f1)
