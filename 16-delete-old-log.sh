@@ -8,4 +8,4 @@ echo "files to be deleted: $FILES_TO_DELETE"
 while read -r file
 do 
    echo "deleting file $file"
-done < $FILES_TO_DELETE
+done <<< $FILES_TO_DELETE
