@@ -7,6 +7,7 @@ echo "files to be deleted: $FILES_TO_DELETE"
 
 while read -r file
 do 
-   echo "deleting file $file"
+   echo "deleting file $file" #here file is variable, we give any name;
    rm -rf $file
+   echo "deleted file $file"
 done <<< $FILES_TO_DELETE
