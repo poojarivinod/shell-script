@@ -14,6 +14,9 @@ LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H:%M:%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
+mkdir -p /home/ec2-user/shell-scrip-log
+echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
+
 USAGE(){
    echo -e "$R ERROR:: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(optional)>"
    exit 1
@@ -39,5 +42,9 @@ fi
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 echo "files are:: $FILES"
 
-mkdir -p /home/ec2-user/shell-scrip-log
-echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
+if [ -n $FILES ] # n is <not>, not empty means true
+then
+     echo "Files are: $FILES"
+else
+     echo "No files found older than $DAYS"
+fi         
