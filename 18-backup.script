@@ -1,0 +1,26 @@
+#!/bin/bash
+
+SOURCE_DIR=$1
+DEST_DIR=$2
+DAYS=${3:-14} # if user is not providing number of days, we are taking 14 days as default;
+
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m" #it has to give, other wise previous mentioned color will contine 
+
+LOG_FOLDER="/var/log/shell-script.log" # /var/log/shell-script.log 
+LOG_FILE=$(echo $0 | cut -d "." -f1)
+TIMESTAMP=$(date +%Y-%m-%d-%H:%M:%S)
+LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
+
+USAGE(){
+   echo -e "$R ERROR:: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(optional)>"
+}
+
+if [ $# -lt 2 ]
+    then 
+         echo
+
+echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
+
