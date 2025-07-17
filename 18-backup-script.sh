@@ -40,7 +40,6 @@ then
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
-echo "files are:: $FILES"
 
 if [ -n "$FILES" ] # n is <not>, not empty means true
 then
