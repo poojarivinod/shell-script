@@ -37,7 +37,7 @@ then
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime $DAYS)
-echo $FILES
+echo "files are:: $FILES"
 
 mkdir -p /home/ec2-user/shell-scrip-log
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
