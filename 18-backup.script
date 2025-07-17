@@ -9,13 +9,14 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m" #it has to give, other wise previous mentioned color will contine 
 
-LOG_FOLDER="/var/log/shell-script.log" # /var/log/shell-script.log 
+LOG_FOLDER="/home/ec2-user/shell-scrip-log" # /var/log/shell-script.log 
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H:%M:%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
 USAGE(){
    echo -e "$R ERROR:: $N sh 18-backup.sh <SOURCE_DIR> <DEST_DIR> <DAYS(optional)>"
+   exit 1
 }
 
 if [ $# -lt 2 ]
@@ -23,4 +24,5 @@ if [ $# -lt 2 ]
          echo
 fi         
 
+mkdir -p /home/ec2-user/shell-scrip-log
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
