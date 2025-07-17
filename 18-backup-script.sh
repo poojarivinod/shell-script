@@ -45,5 +45,5 @@ if [ -n "$FILES" ] # n is <not>, not empty means true
 then
      echo "Files are: $FILES"
 else
-     echo "No files found older than $DAYS"
+     echo "No files found older than $DAYS days"
 fi         
