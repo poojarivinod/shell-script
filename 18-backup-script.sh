@@ -45,7 +45,7 @@ if [ -n "$FILES" ] # n is <not>, not empty means true, true means there ars file
 then
      echo "Files are: $FILES"
      ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
-     FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS) | zip -@ "$ZIP_FILE"
+     "$FILES" | zip -@ "$ZIP_FILE"
 else
      echo "No files found older than $DAYS days"
 fi         
