@@ -46,6 +46,12 @@ then
      echo "Files are: $FILES"
      ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
      find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE
+     while read -r file
+     do 
+         echo "deleting file $file" #here file is variable, we give any name;
+         rm -rf $file
+         echo "deleted file $file"
+     done <<< $FILES
 else
      echo "No files found older than $DAYS days"
 fi         
