@@ -35,5 +35,9 @@ then
      echo -e " $DEST_DIR Does not exist ......please check"
      exit 1
 fi
+
+FILES=$(find $SOURCE_DIR -name "*.log" +mtime $DAYS)
+echo $FILES
+
 mkdir -p /home/ec2-user/shell-scrip-log
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
