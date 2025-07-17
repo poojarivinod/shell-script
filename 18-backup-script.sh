@@ -21,7 +21,7 @@ USAGE(){
 
 if [ $# -lt 2 ]
     then 
-         USAGE
+         USAGE # $ is not given infront of USAGE, because it is function
 fi         
 
 if [ ! -d $SOURCE_DIR ]
