@@ -8,4 +8,10 @@ do
     USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
     PARTITION=$(echo $line | awk -F " " '{print $NF}')
     echo "Partition: $PARTITION , Usage: $USAGE"
+    if [ $USAGE -ge $DISK_THRESHOLD ]
+    then
+        MSG+="High Disk Usage on partition: $PARTITION Usage is $USAGE" # + is given because to append the message otherwise print the single message by replacing previous message
+    fi
 done <<< $DISK_USAGE  
+
+echo "Message: $MSG"
