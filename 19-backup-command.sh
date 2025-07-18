@@ -10,7 +10,7 @@ Y="\e[33m"
 N="\e[0m" #it has to give, other wise previous mentioned color will contine 
 
 LOG_FOLDER="/home/ec2-user/shell-script-log"  
-LOG_FILE=$(echo $0 | cut -d "." -f1)
+LOG_FILE=$(echo $0)
 TIMESTAMP=$(date +%Y-%m-%d-%H:%M:%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
