@@ -10,19 +10,10 @@ Y="\e[33m"
 N="\e[0m" #it has to give, other wise previous mentioned color will contine 
 
 LOG_FOLDER="/home/ec2-user/shell-script-log"  
-LOG_FILE=$(echo $0)
+LOG_FILE=$(echo $0  | awk -F "/" '{print $NF}' | cut -d "." -f1)
 TIMESTAMP=$(date +%Y-%m-%d-%H:%M:%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 
-VALIDATE(){
-     if [ $1 -ne 0 ]
- then
-    echo -e "$2 .....$R FAILURE $N"
-    exit 2
- else
-    echo -e "$2 ....$G SUCCESS $N"
- fi
-}
 
 mkdir -p /home/ec2-user/shell-script-log
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
@@ -48,9 +39,6 @@ then
      echo -e " $DEST_DIR Does not exist ......please check"
      exit 1
 fi
-
-sudo dnf install zip -y &>> $LOG_FILE_NAME
-VALIDATE $? "INSTALLING zip command"
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
