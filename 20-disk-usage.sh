@@ -14,4 +14,4 @@ do
     fi #<br> provides new line, otherwise output gives in single line
 done <<< $DISK_USAGE  
 
-echo "Message: $MSG"
+echo -e "Message: $MSG"
