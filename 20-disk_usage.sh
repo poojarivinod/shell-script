@@ -11,7 +11,9 @@ do
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
         MSG+="High Disk Usage on partition: $PARTITION Usage is $USAGE \n" # + is given because to append the message otherwise print the single message by replacing previous message
-    fi #<br> provides new line, otherwise output gives in single line
+    fi #\n provides new line, otherwise output gives in single line
 done <<< $DISK_USAGE  
 
-echo -e "Message: $MSG"
+echo -e "Message: $MSG" # to run \n we should give the -e
+
+echo "$MSG" | mutt -s "High Disk Usage" vinod07081@gmail.com
