@@ -24,7 +24,7 @@ VALIDATE(){
  fi
 }
 
-mkdir -p /home/ec2-user/shell-scrip-log
+mkdir -p /home/ec2-user/shell-script-log
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
 
 USAGE(){
