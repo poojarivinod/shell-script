@@ -17,3 +17,4 @@ done <<< $DISK_USAGE
 echo -e "Message: $MSG" # to run \n we should give the -e
 
 echo "$MSG" | mutt -s "High Disk Usage" vinod07081@gmail.com # this line is meant for sending email, when the xfs is reaches the 5%
+# in this we have to to gmail address
