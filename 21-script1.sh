@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MSG="$SCRIPT1"
+MSG="SCRIPT1"
 
 echo "Hello world: $MSG"
 
