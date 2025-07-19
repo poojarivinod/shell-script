@@ -1,7 +1,5 @@
 #!/bin/bash
 
- # if user is not providing number of days, we are taking 14 days as default;
-
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
