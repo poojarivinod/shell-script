@@ -1,5 +1,9 @@
 #!/bin/bash
 
+SOURCE_DIR=$1
+DEST_DIR=$2
+DAYS=${3:-14}
+
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
