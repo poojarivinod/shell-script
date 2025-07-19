@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./25-commom.sh
+source ./25-common.sh
 
 mkdir -p /home/ec2-user/shell-script-log
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
