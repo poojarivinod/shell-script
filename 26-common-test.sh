@@ -2,10 +2,6 @@
 
 source ./25-common.sh
 
-SOURCE_DIR=$1
-DEST_DIR=$2
-DAYS=${3:-14}
-
 mkdir -p /home/ec2-user/shell-script-log
 echo "script started executing at: $TIMESTAMP" &>> $LOG_FILE_NAME
 
