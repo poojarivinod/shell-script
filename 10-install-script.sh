@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USERID=$( id -u)
+USERID=$( id -u) # id will be user id and group id, id -u means only user id
 
 if [ $USERID -ne 0 ] #0 → root user, Non-zero → normal user
 then
