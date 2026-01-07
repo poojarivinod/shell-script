@@ -2,14 +2,14 @@
 
 USERID=$( id -u)
 
-if [ $USERID -ne 0 ]
+if [ $USERID -ne 0 ] #0 → root user, Non-zero → normal user
 then
     echo "ERROR:: you must have sudo access to execute this script"
     exit 1 # other than 0
 fi
 
 dnf list installed mysql
-    if [ $? -ne 0 ]
+    if [ $? -ne 0 ] #0 → success , Non-zero → failure
 then
  
     dnf install mysql -y
