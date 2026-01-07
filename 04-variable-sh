@@ -7,3 +7,8 @@ echo "$PERSON1:: hi $PERSON2"
 echo "$PERSON2:: hello $PERSON1"
 echo "$PERSON1:: how are u"
 echo "$PERSON2:: i am good,how are U"
+
+# sh 04-variable-sh (first argument) (second argument) 
+# sh 04-variable-sh vinod sudarshan
+# In this shellscript , we can give input to variable via command promt
+
