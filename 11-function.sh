@@ -18,7 +18,7 @@ then
     exit 1 # other than 0
 fi
 
-dnf list installed mysql
+dnf list installed mysqlff
     if [ $? -ne 0 ]
 then
     dnf install mysql -y
