@@ -28,7 +28,7 @@ CHECK_ROOT(){
     then
          echo "ERROR:: you must have sudo access to execute this script"
          exit 1 # other than 0
-fi
+    fi
 }
 
 for package in $@ # package is variable, we can give any name
