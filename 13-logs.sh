@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m" #it has to give, other wise previous mentioned color will contine 
 
 LOG_FOLDER="/var/log/shell-script.log" # /var/log/shell-script.log 
-LOG_FILE=$(echo $0 | cut -d "." -f1)
+LOG_FILE=$(echo $0 | cut -d "." -f1) # $0 — Script name(13-logs.sh)
 TIMESTAMP=$(date +%Y-%m-%d-%H:%M:%S)
 LOG_FILE_NAME="$LOG_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 

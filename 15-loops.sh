@@ -31,7 +31,7 @@ CHECK_ROOT(){
 fi
 }
 
-for package in $@
+for package in $@ # package is variable, we can give any name
 do
    dnf list installed $package &>>$LOG_FILE_NAME
    if [ $? -ne 0 ]
